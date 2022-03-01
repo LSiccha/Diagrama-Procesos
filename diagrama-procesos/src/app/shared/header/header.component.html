@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" style="background-color: #e33b3b">
+  <mat-toolbar-row class="container">
+    <img (click)="toDashboard()" src="assets/img/logo.png" alt="logo" style="width: 50px; margin-right: 40px;">
+    <span>Diagrama Procesos</span>
+    <span class="spacer">
+
+    </span>
+    <button mat-button [mat-menu-trigger-for]="menuP">
+      <mat-icon>
+        person
+      </mat-icon>
+      <mat-label>Current User</mat-label>
+    </button>
+    <mat-menu #menuP="matMenu">
+      <mat-button-toggle-group>
+        <mat-button-toggle value="" (click)="logout()">Sign Out</mat-button-toggle>
+      </mat-button-toggle-group>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,54 @@
+
+
+<div fxLayout="row">
+  <app-left-menu  fxFlex="15"></app-left-menu>
+  <div style=" background-color: whitesmoke; width: 100%;">
+
+    <div class="canvas-container" style="position:relative;">
+
+
+      <div style="height: 1000px; width: 97%; margin: 30px; background-color: white; vertical-align: bottom;">
+
+        <div *ngIf="diagramas" class="diagramas-container" style="margin: 10px 0;">
+          <div  fxLayout="row wrap" fxLayoutGap="20px grid" fxLayoutAlign="start stretch">
+            <app-diagrama-card
+              *ngFor="let diagrama of diagramas"
+              [diagrama]="diagrama"
+              (onDelete)="deleteDiagrama($event)"
+              fxFlex="25">
+            </app-diagrama-card>
+          </div>
+        </div>
+
+        <!--
+         <div style="height: 600px; background-color: whitesmoke">
+          <mat-form-field>
+            <label>Uno</label>
+            <input
+              matInput
+              type="number"
+              [(ngModel)]="uno"
+              (change)="suma()"
+            >
+          </mat-form-field>
+          <mat-form-field>
+            <label>Dos</label>
+            <input
+              matInput
+              type="number"
+              [(ngModel)]="dos"
+              (change)="suma()"
+            >
+          </mat-form-field>
+          <button (click)="suma()" mat-stroked-button>Sumar</button>
+
+          <h2>Resultado: {{this.total}}</h2>
+
+        </div>
+        -->
+
+
+      </div>
+    </div>
+  </div>
+</div>

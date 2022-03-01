@@ -1,0 +1,19 @@
+
+.container {
+  padding: 0 40px;
+}
+
+.spacer {
+  margin-left: 60%;
+}
+
+body{
+  align-content: center;
+}
+
+
+.router-container{
+  width: 20%;
+  margin: auto;
+  margin-top: 200px;
+}

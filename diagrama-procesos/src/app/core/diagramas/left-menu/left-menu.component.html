@@ -1,0 +1,44 @@
+<ng-container >
+
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav-content >
+
+
+      <mat-expansion-panel [expanded]="true" >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Acciones
+          </mat-panel-title>
+          <mat-panel-description>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div fxLayoutAlign="center center">
+          <button mat-raised-button color="warn" (click)="newDiagram()"> Nuevo Diagrama </button>
+        </div>
+
+
+      </mat-expansion-panel>
+
+
+
+      <mat-expansion-panel [expanded]="true" >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Diagramas
+          </mat-panel-title>
+          <mat-panel-description>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <button mat-stroked-button (click)="newDiagram()"> Mis Diagramas </button>
+        <div style="margin-top: 20px"></div>
+        <button mat-stroked-button (click)="newDiagram()"> Diagramas Destacados </button>
+      </mat-expansion-panel>
+
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+</ng-container>
+
+

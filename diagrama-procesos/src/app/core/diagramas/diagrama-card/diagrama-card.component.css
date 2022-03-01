@@ -1,0 +1,32 @@
+
+mat-card:hover {
+  cursor: pointer;
+}
+
+.mat-card:hover{
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+  background-color: #ff9c00;
+  cursor: default;
+}
+
+.mat-card:hover mat-card-title {
+  color: black;
+  cursor: pointer;
+}
+
+
+
+body{
+  background-color: #f45100;
+
+}
+
+
+h3{
+  background-color: #ff9c00;
+  border-radius: 5px;
+}
+
+.delete:hover{
+  cursor: pointer;
+}

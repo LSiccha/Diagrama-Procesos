@@ -1,0 +1,26 @@
+
+<header>
+
+
+  <mat-toolbar color="primary" style="background-color: #e33b3b">
+    <mat-toolbar-row class="container">
+      <img src="assets/img/logo.png" alt="logo" style="width: 50px; margin-right: 40px;">
+      <span>Diagrama Procesos</span>
+      <span class="spacer">
+
+    </span>
+      <button *ngIf="inRegister" mat-raised-button (click)="inRegister=false" routerLink="/auth/login" color="basic">Iniciar Sesion</button>
+      <button *ngIf="!inRegister" mat-raised-button (click)="inRegister=true" routerLink="/auth/register" color="basic">Registrarse</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<body>
+<div class="router-container p-5 mt-5 mb-5">
+  <router-outlet></router-outlet>
+</div>
+</body>
+
+<app-footer></app-footer>
+
+

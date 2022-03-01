@@ -1,0 +1,129 @@
+<div *ngIf="data" class="container" cdkDrag cdkDragRootElement=".cdk-overlay-pane"  >
+  <div class="handle" cdkDragHandle>
+    <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+      <path d="M0 0h24v24H0z" fill="none"></path>
+    </svg>
+  </div>
+
+  <h1  mat-dialog-title>{{this.data.name}}</h1>
+  <div mat-dialog-content>
+    <form
+      (ngSubmit)="save()"
+      autocomplete="off"
+      [formGroup]="form"
+      #frmLibro="ngForm"
+      fxLayout="column"
+    >
+      <div fxLayoutAlign="row" fxLayoutGap="10">
+        <mat-form-field appearance="outline" class="d-block" fxFlex="50" >
+          <mat-label>
+            Nombre
+          </mat-label>
+          <input
+            type="text"
+            placeholder="Nombre"
+            matInput
+            formControlName="name"
+            rows="5">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="d-block" fxFlex="50" >
+          <mat-label>
+            Duracion
+          </mat-label>
+          <input
+            type="number"
+            placeholder="Duracion"
+            matInput
+            formControlName="duration">
+        </mat-form-field>
+      </div>
+
+      <div class="inputs">
+        <h2>Inputs <fa-icon style="color: whitesmoke" fxFlexAlign="end end"  class="add-icon" [icon]="['fas', 'plus']" ></fa-icon></h2>
+        <div fxLayoutAlign="row">
+          <mat-form-field appearance="outline" class="d-block" fxFlex="100" >
+            <mat-label>
+              Nombre
+            </mat-label>
+            <input
+              type="text"
+              placeholder="Nombre"
+              matInput
+              rows="5">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="outputs">
+        <div fxLayoutAlign="row" fxLayoutGap="10">
+          <h2>Outputs <fa-icon style="color: whitesmoke" fxFlexAlign="end end"  class="add-icon" [icon]="['fas', 'plus']" ></fa-icon> </h2>
+        </div>
+
+        <div fxLayoutAlign="row">
+          <mat-form-field appearance="outline" class="d-block" fxFlex="100" >
+            <mat-label>
+              Nombre
+            </mat-label>
+            <input
+              type="text"
+              placeholder="Nombre"
+              matInput
+              rows="5">
+          </mat-form-field>
+        </div>
+
+      </div>
+      <div class="tools">
+        <h2>Tools <fa-icon style="color: whitesmoke" fxFlexAlign="end end"  class="add-icon" [icon]="['fas', 'plus']" ></fa-icon></h2>
+        <div fxLayoutAlign="row">
+          <mat-form-field appearance="outline" class="d-block" fxFlex="100" >
+            <mat-label>
+              Nombre
+            </mat-label>
+            <input
+              type="text"
+              placeholder="Nombre"
+              matInput
+              rows="5">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="tools">
+        <h2>Parent Processes <fa-icon style="color: whitesmoke" fxFlexAlign="end end"  class="add-icon" [icon]="['fas', 'plus']" ></fa-icon></h2>
+        <div fxLayoutAlign="row">
+          <mat-form-field appearance="outline" class="d-block" fxFlex="100" >
+            <mat-label>
+              Nombre
+            </mat-label>
+            <mat-select>
+              <mat-option *ngFor="let process of options"></mat-option>
+            </mat-select>
+
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div fxLayoutAlign="row" fxLayoutAlign="center" fxLayoutGap="10px">
+
+        <button
+          fxFlex="50"
+          mat-raised-button
+          color="primary"
+          type="submit"
+          class="ms-2"
+          [disabled]="frmLibro.invalid"
+        >
+          Guardar
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+  <div>
+
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+
+.container {
+  padding: 0 40px;
+}
+
+.spacer {
+  margin-left: 60%;
+}
+
+img:hover{
+  cursor: pointer;
+}

@@ -1,0 +1,45 @@
+
+h3{
+  background-color: #ff9c00;
+  border-radius: 5px;
+}
+
+p {
+  border-radius: 5px;
+  border: whitesmoke solid 5px;
+}
+
+span {
+  background-color: #ff9c00;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+mat-card:hover {
+  /**cursor: grab;**/
+}
+
+.handle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ccc;
+  cursor: move;
+  width: 24px;
+  height: 24px;
+}
+
+
+.delete h3:hover {
+  cursor: not-allowed;
+}
+
+.edit-icon{
+  background-color: yellowgreen;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.edit-icon:hover{
+  cursor: pointer;
+}

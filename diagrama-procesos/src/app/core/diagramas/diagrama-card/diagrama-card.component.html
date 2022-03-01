@@ -1,0 +1,12 @@
+
+
+<mat-card  *ngIf="diagrama">
+  <mat-card-header fxLayout="row">
+    <mat-card-title [routerLink]="['/core/diagramas/'+diagrama.id]" style="font-size: 0.8rem; height: 40px">{{diagrama.nombre}}</mat-card-title>
+    <div class="delete"
+         style="text-align: center; width: 100px;  color: white; margin-left: 60px">
+      <h3 (click)="delete()" style="background-color: red; width: 70px;">Eliminar</h3>
+    </div>
+  </mat-card-header>
+  <img mat-card-image src="assets/img/placeholder-diagrama.jpg"  alt="diagram">
+</mat-card>

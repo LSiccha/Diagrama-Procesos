@@ -1,0 +1,63 @@
+<mat-card style="width: 200px" cdkDrag cdkDragBoundary=".canvas-container">
+
+  <mat-card-content>
+    <div fxLayout="column">
+
+      <div>
+        <div class="delete"
+             style="text-align: center; width: 50%;  color: white"
+             fxFlex=""><h3 (click)="emitDelete()" style="background-color: red;">Eliminar</h3>
+        </div>
+        <div class="edit"
+             style="text-align: center; width: 50%;  color: white"
+             fxFlex=""><fa-icon (click)="openEditDialog()" class="edit-icon" [icon]="['fas', 'pencil-alt']" transform="grow-15"></fa-icon>
+        </div>
+        <div class="handle" cdkDragHandle>
+          <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+        </div>
+      </div>
+
+
+      <div style="text-align: center" fxFlex=""><h3>{{process.name}}</h3></div>
+
+      <div fxFlex="">
+        <h4>Inputs</h4>
+        <p style="text-align: center" *ngFor="let input of process.inputs">
+          {{input.nombre}}
+        </p>
+      </div>
+
+      <div fxFlex="">
+        <h4>Tools</h4>
+        <p style="text-align: center" *ngFor="let tool of process.tools">
+          {{tool}}
+        </p>
+      </div>
+
+      <div fxFlex="">
+        <h4>Outputs</h4>
+        <p style="text-align: center" *ngFor="let output of process.outputs">
+          {{output.nombre}}
+        </p>
+      </div>
+
+      <div fxFlex="">
+        <div fxLayout="row">
+          <div fxFlex="50" style="text-align: left">
+            <h4>Status</h4>
+            <span>{{process.state}}</span>
+          </div>
+          <div fxFlex="50" style="text-align: end">
+            <h4>Duration</h4>
+            <span>{{process.duration}}s</span>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,45 @@
+<div style=" background-color: whitesmoke; width: 100%;">
+
+  <div class="canvas-container" style="position:relative;">
+
+  <canvas
+    class="canvas"
+    #canvas
+    height=""
+    width=""
+    style="
+  height: 1000px;
+  width:97%;
+  margin: 30px;
+  background-color: white;
+  vertical-align: bottom;
+  z-index: 1;
+">
+  </canvas>
+
+  <app-process style="z-index: 2; position: absolute; top: 200px; left: 600px">
+  </app-process>
+
+    <app-start
+      (output)="start()"
+      style="z-index: 2; position: absolute; top: 500px; left: 150px">
+
+    </app-start>
+
+    <app-process *ngFor="let process of procesos; let i = index"
+                 (delete)="deleteProcess($event)"
+                 (update)="updateProcess($event)"
+                 [process]="process"
+                 style="z-index: 2;
+                 position: absolute;
+                 top: 200px;
+                 left: 100px"
+                 [ngStyle] = "{'top' : 100+i*30+'px','left' : 200+i*40+'px'}"
+
+    >
+
+    </app-process>
+
+  </div>
+
+</div>
